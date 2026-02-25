@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Abbas Online </title>
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      } /* WhatsApp Button */
+      .whatsapp-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25d366;
+        color: white;
+        padding: 14px 18px;
+        border-radius: 50px;
+        font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+      }
+      .whatsapp-float:hover {
+        background: #128c7e;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <!-- NAVBAR -->
+   <header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="flex justify-between items-center px-4 md:px-6 py-3 max-w-7xl mx-auto">
+    <!-- LOGO -->
+    <div class="flex items-center">
+      <img
+        src="Imegs/al abbas Logo.png"
+        alt="Al Abbas Logo"
+        class="h-11 md:h-16 w-auto object-contain"
+      />
+    </div>
+
+    <!-- DESKTOP MENU -->
+    <nav class="hidden md:flex space-x-6 font-medium">
+      <a href="index.html" class="hover:text-green-800 transition">Home</a>
+      <a href="course.html" class="hover:text-green-800 transition">Courses</a>
+      <a href="about.html" class="hover:text-green-800 transition">About</a>
+      <a href="reviews.html" class="hover:text-green-800 transition">Reviews</a>
+      <a href="contact.html" class="hover:text-green-800 transition">Contact</a>
+    </nav>
+
+    <!-- BUTTON + MOBILE ICON -->
+    <div class="flex items-center space-x-3">
+      <button onclick="toggleMenu()" class="md:hidden text-2xl">☰</button>
+     <a
+  href="https://wa.me/+923439399590"
+  target="_blank"
+  class="bg-green-800 text-white px-4 py-2 md:px-5 md:py-2 rounded hover:bg-yellow-500 hover:text-black transition cursor-pointer inline-block"
+>
+  Free Trial
+</a>
+
+    </div>
+  </div>
+
+  <!-- MOBILE MENU -->
+  <div
+    id="mobileMenu"
+    class="hidden flex flex-col bg-white px-6 pb-4 space-y-3 md:hidden font-medium"
+  >
+    <a href="index.html">Home</a>
+    <a href="course.html">Courses</a>
+    <a href="about.html">About</a>
+    <a href="reviews.html">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</header>
+
+
+
+
+
+    <!-- HERO -->
+    <section
+      id="home"
+      class="relative min-h-screen overflow-hidden m-10 rounded-lg"
+    >
+      <!-- SLIDE 1 -->
+      <div class="slide absolute inset-0 flex items-center opacity-0">
+        <img
+          src="https://images.unsplash.com/photo-1585036156171-384164a8c675"
+          class="absolute w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-left text-white">
+          <h1 class="text-3xl md:text-5xl font-bold">
+            Hifz Program For Kids & Adults
+          </h1>
+          <p class="mt-4">Memorize Quran Step by Step Easily</p>
+          <a
+            href="#"
+            class="inline-block mt-6 bg-yellow-500 text-black px-6 py-3 rounded font-semibold"
+          >
+            Enroll Today
+          </a>
+        </div>
+      </div>
+      <div class="slide absolute inset-0 flex items-center">
+        <img
+          src="https://images.unsplash.com/photo-1542810634-71277d95dcbb"
+          class="absolute w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-left text-white">
+          <h1 class="text-3xl md:text-5xl font-bold">
+            Learn Quran With Expert Teachers
+          </h1>
+          <p class="mt-4">Certified Male & Female Quran Tutors Available</p>
+          <a
+            href="https://wa.me/+923439399590"
+            class="inline-block mt-6 bg-yellow-500 text-black px-6 py-3 rounded font-semibold"
+          >
+            Start Free Trial
+          </a>
+        </div>
+      </div>
+      <!-- SLIDE 2 -->
+      <!-- SLIDE 3 -->
+      <div class="slide absolute inset-0 flex items-center opacity-0">
+        <img
+          src="https://images.unsplash.com/photo-1564769625905-50e93615e769"
+          class="absolute w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-left text-white">
+          <h1 class="text-3xl md:text-5xl font-bold">Islamic Studies Course</h1>
+          <p class="mt-4">Namaz, Duas, Hadith & Basic Islam</p>
+          <a
+            href="#"
+            class="inline-block mt-6 bg-yellow-500 text-black px-6 py-3 rounded font-semibold"
+          >
+            Join Now
+          </a>
+        </div>
+      </div>
+      <!-- SLIDE 4 -->
+      <div class="slide absolute inset-0 flex items-center opacity-0">
+        <img
+          src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae"
+          class="absolute w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-left text-white">
+          <h1 class="text-3xl md:text-5xl font-bold">
+            Free Trial Classes Available
+          </h1>
+          <p class="mt-4">Start Learning Quran Today</p>
+          <a
+            href="#"
+            class="inline-block mt-6 bg-yellow-500 text-black px-6 py-3 rounded font-semibold"
+          >
+            Start Now
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- SLIDER SCRIPT -->
+    <script>
+      let slide = document.querySelectorAll(".slide");
+      let i = 0;
+      setInterval(() => {
+        slides[i].classList.add("opacity-0");
+        i = (i + 1) % slides.length;
+        slides[i].classList.remove("opacity-0");
+      }, 4000);
+    </script>
+    <!-- SLIDER SCRIPT -->
+    <script>
+      let slides = document.querySelectorAll(".slide");
+      let index = 0;
+      setInterval(() => {
+        slides[index].classList.remove("opacity-100");
+        slides[index].classList.add("opacity-0");
+        index = (index + 1) % slides.length;
+        slides[index].classList.remove("opacity-0");
+        slides[index].classList.add("opacity-100");
+      }, 4000);
+    </script>
+<section class="py-20 bg-white">
+
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center m-4">
+
+
+    <!-- MISSION TEXT -->
+
+    <div>
+
+      <h3 class="text-3xl font-bold text-green-800 mb-6 ">
+
+        Our Mission
+
+      </h3>
+
+      <p class="text-gray-600 mb-4">
+
+        At Al Abbas Quran Online Academy, our mission is to deliver authentic,
+        high-quality Quran and Islamic education to students worldwide through
+        modern and convenient online learning methods. We are committed to
+        preserving Islamic values while using the latest technology to make
+        learning easy, effective, and accessible for everyone.
+
+      </p>
+
+      <!-- BULLET POINTS -->
+
+      <ul class="space-y-3 text-gray-700">
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Provide qualified male and female Quran teachers
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Deliver one-to-one personalized online classes
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Teach Quran with proper Tajweed and pronunciation
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Help students memorize Quran (Hifz) with strong guidance
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Provide flexible class timings for worldwide students
+        </li>
+
+        <li class="flex items-start">
+          <span class="text-green-700 font-bold mr-2">✔</span>
+          Promote Islamic values, character, and knowledge
+        </li>
+
+      </ul>
+
+    </div>
+
+
+
+    <!-- ISLAMIC IMAGE -->
+
+    <div>
+
+      <img
+        src="https://images.unsplash.com/photo-1585036156171-384164a8c675"
+        alt="Islamic Quran"
+        class="rounded-lg shadow-lg w-full">
+
+    </div>
+
+
+  </div>
+
+</section>
+
+    <!-- COURSES -->
+  <section id="courses" class="py-20 max-w-7xl mx-auto px-6 text-center">
+
+  <h2 class="text-4xl font-bold text-green-800">Our Courses</h2>
+
+  <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+
+
+    <!-- COURSE 1 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-3 hover:scale-105 border border-transparent hover:border-blue-500 transition duration-300">
+
+      <div class="text-4xl">📖</div>
+
+      <h3 class="text-xl font-semibold text-green-800 mt-3">
+        Quran with Tajweed
+      </h3>
+
+      <p class="mt-2 text-gray-600">
+        Learn correct pronunciation with Tajweed rules.
+      </p>
+
+    </div>
+
+
+    <!-- COURSE 2 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-3 hover:scale-105 border border-transparent hover:border-blue-500 transition duration-300">
+
+      <div class="text-4xl">🕌</div>
+
+      <h3 class="text-xl font-semibold text-green-800 mt-3">
+        Hifz Program
+      </h3>
+
+      <p class="mt-2 text-gray-600">
+        Memorize the Holy Quran with expert teachers.
+      </p>
+
+    </div>
+
+
+    <!-- COURSE 3 -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-3 hover:scale-105 border border-transparent hover:border-blue-500 transition duration-300">
+
+      <div class="text-4xl">🌙</div>
+
+      <h3 class="text-xl font-semibold text-green-800 mt-3">
+        Islamic Studies
+      </h3>
+
+      <p class="mt-2 text-gray-600">
+        Learn Namaz, Duas, Hadith, and Islamic basics.
+      </p>
+
+    </div>
+
+
+    <!-- COURSE 4 NEW ACADEMIC -->
+    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-3 hover:scale-105 border border-transparent hover:border-blue-500 transition duration-300">
+
+      <div class="text-4xl">🎓</div>
+
+      <h3 class="text-xl font-semibold text-green-800 mt-3">
+        Academic Courses
+      </h3>
+
+      <p class="mt-2 text-gray-600">
+        English, Math, Science, and school subjects for all grades.
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+    <!-- WHY CHOOSE US -->
+    <section id="about" class="bg-gray-100 py-20 text-center px-6">
+      <h2 class="text-3xl font-bold text-green-800">Unlock Your True Potential</h2>
+    <div class="grid md:grid-cols-4 gap-6 mt-10 max-w-6xl mx-auto text-xl text-center">
+
+  <div>
+    <h3 class="font-bold text-3xl" data-target="1999" data-suffix="+">0</h3>
+    <p>Students</p>
+  </div>
+
+  <div>
+    <h3 class="font-bold text-xl" data-target="99" data-suffix="+">0</h3>
+    <p>Teachers</p>
+  </div>
+
+  <div>
+    <h3 class="font-bold text-xl" data-target="24" data-suffix="/7">0</h3>
+    <p>Available</p>
+  </div>
+
+  <div>
+    <h3 class="font-bold text-xl" data-target="99" data-suffix="%">0</h3>
+    <p>Satisfaction</p>
+  </div>
+
+</div>
+
+<script>
+  const counters = document.querySelectorAll("[data-target]");
+  counters.forEach(counter => {
+    const suffix = counter.getAttribute("data-suffix") || "";
+    const updateCount = () => {
+      const target = +counter.getAttribute("data-target");
+      const count = +counter.innerText.replace(/\D/g,''); // remove any non-digits
+
+      const increment = target / 200; // adjust speed
+      if(count < target){
+        counter.innerText = Math.ceil(count + increment) + suffix;
+        setTimeout(updateCount, 20);
+      } else {
+        counter.innerText = target + suffix;
+      }
+    };
+    updateCount();
+  });
+</script>
+
+
+    </section>
+
+    <!-- CONTACT -->
+  <section id="contact" class="bg-gradient-to-r from-green-900 to-green-700 text-white py-20 px-6">
+
+  <div class="max-w-4xl mx-auto text-center">
+
+    <h2 class="text-4xl font-bold mb-4">
+      Start Your Free Trial Today
+    </h2>
+
+    <p class="text-lg text-green-100 mb-10">
+      Join Al Abbas Online Islamic Academy and begin your Quran learning journey with our qualified teachers.
+      Book your FREE trial class now.
+    </p>
+
+
+    <!-- Contact Cards -->
+    <div class="grid md:grid-cols-2 gap-6 mb-10">
+
+
+      <!-- WhatsApp Card -->
+      <a href="https://wa.me/+923439399590" target="_blank"
+         class="bg-white text-green-900 rounded-lg p-6 shadow-md hover:shadow-2xl hover:shadow-green-500/40 hover:-translate-y-2 transition duration-300 block">
+
+        <!-- Icon -->
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.52 3.48A11.94 11.94 0 0012.06 0C5.5 0 .2 5.3.2 11.86c0 2.1.55 4.15 1.6 5.97L0 24l6.32-1.66a11.83 11.83 0 005.74 1.47h.01c6.56 0 11.86-5.3 11.86-11.86 0-3.17-1.23-6.14-3.41-8.47zM12.07 21.3h-.01a9.41 9.41 0 01-4.8-1.32l-.34-.2-3.75.98 1-3.66-.22-.38a9.38 9.38 0 01-1.43-5.01c0-5.19 4.23-9.42 9.43-9.42 2.52 0 4.89.98 6.67 2.76a9.36 9.36 0 012.76 6.66c0 5.2-4.23 9.43-9.42 9.43zm5.17-7.03c-.28-.14-1.64-.81-1.9-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.08-.17.19-.34.21-.62.07-.28-.14-1.2-.44-2.28-1.4-.84-.75-1.4-1.68-1.56-1.96-.16-.28-.02-.43.12-.57.13-.13.28-.34.43-.5.14-.17.19-.28.28-.47.1-.19.05-.36-.02-.5-.07-.14-.64-1.54-.88-2.1-.23-.56-.47-.48-.64-.49l-.55-.01c-.19 0-.5.07-.76.36-.26.28-1 1-1 2.44s1.02 2.83 1.16 3.03c.14.19 2 3.05 4.84 4.28.67.29 1.2.47 1.61.6.68.22 1.3.19 1.8.11.55-.08 1.64-.67 1.87-1.31.23-.64.23-1.2.16-1.31-.07-.1-.26-.17-.55-.31z"/>
+          </svg>
+        </div>
+
+        <!-- <h3 class="font-semibold text-xl mb-2">
+          WhatsApp
+        </h3> -->
+
+        <p class="text-gray-600">
+          +923439399590
+        </p>
+
+        <p class="text-green-700 font-semibold mt-2">
+          Click to Chat Now
+        </p>
+
+      </a>
+
+
+
+      <!-- Email Card -->
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Khalilkhan7120@gmail.com" target="_blank"
+   class="bg-white text-green-900 rounded-lg p-6 shadow-md hover:shadow-2xl hover:shadow-blue-500/40 hover:-translate-y-2 transition duration-300 block">
+
+        <!-- Icon -->
+        <div class="flex justify-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M12 13.065L.015 4.5h23.97L12 13.065zM12 15L0 6v14h24V6l-12 9z"/>
+          </svg>
+        </div>
+
+
+        <p class="text-gray-600">
+          Khalilkhan7120@gmail.com
+        </p>
+
+        <p class="text-blue-700 font-semibold mt-2">
+          Click to Send Email
+        </p>
+
+      </a>
+
+
+    </div>
+
+
+
+    <!-- Main Button -->
+    <a href="https://wa.me/+923439399590" target="_blank"
+       class="inline-block bg-yellow-500 text-black text-lg px-8 py-4 rounded-lg font-semibold shadow-lg hover:bg-white hover:scale-105 transition duration-300">
+
+      Book Your FREE Trial Class
+
+    </a>
+
+
+    <p class="mt-6 text-green-200 text-sm">
+      Available 24/7 • Male & Female Teachers • Worldwide Students
+    </p>
+
+
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+<footer class="bg-gray-900 text-gray-300 pt-16">
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-10">
+
+    <!-- LEFT: ABOUT -->
+    <div>
+      <h3 class="text-white text-2xl font-bold mb-4">Al Abbas Online Academy</h3>
+      <p class="text-gray-400 mb-4">
+        International Online Quran & Academic Academy providing Islamic Studies, Hifz, Quran Nazra, and School Subjects worldwide.
+      </p>
+      <p class="text-sm text-blue-300 mb-4 font-bold hover:text-green-300"> Islamabad, Pakistan</p>
+
+    </div>
+
+    <!-- CENTER: QUICK LINKS -->
+    <div class="text-center lg:text-left">
+      <h3 class="text-white text-xl font-semibold mb-4">Quick Links</h3>
+      <ul class="space-y-3">
+        <li><a href="#home" class="hover:text-yellow-400 transition">Home</a></li>
+        <li><a href="#courses" class="hover:text-yellow-400 transition">Courses</a></li>
+        <li><a href="#about" class="hover:text-yellow-400 transition">About Us</a></li>
+        <li><a href="#testimonials" class="hover:text-yellow-400 transition">Reviews</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: CONTACT -->
+    <div class="text-center lg:text-left">
+      <h3 class="text-white text-xl font-semibold mb-4">Contact Us</h3>
+
+      <!-- WhatsApp -->
+ <p class="flex items-center gap-3 mb-3">
+  <!-- WhatsApp Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500" fill="currentColor" viewBox="0 0 448 512">
+    <path d="M380.9 97.1C339-11.4 262.1-6.7 207.4 14.2 94.1 52.4 8 162.2 8 256c0 58.3 24.6 112 64.6 151.6L8 504l97.2-64.4C161.7 487.3 208.8 496 256 496c93.8 0 203.6-86.1 241.8-199.4 20.9-54.7 25.6-131.6-48.9-199.5zM256 448c-46.4 0-91.3-15.6-127.4-44.8l-9.2-7.1-57.8 38.3 38.7-59.4-7.7-9.8C48.3 338.5 32 296.5 32 256 32 153.7 138.7 64 256 64s224 89.7 224 192-96.7 192-224 192zm121.6-154.1c-5.4-2.7-32-15.7-37-17.5-5-1.7-8.7-2.7-12.3 2.7-3.5 5.4-13.6 17.5-16.7 21.1-3 3.5-6.1 3.9-11.4 1.3-31.3-15.6-51.8-27.8-72.7-63.1-5.5-9.5 5.5-8.8 16-29.2 1.8-3.5.9-6.5-.5-9.2-1.4-2.7-12.3-29.7-16.9-40.7-4.4-10.7-8.9-9.2-12.3-9.4-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.6 1.4-14.6 6.9-5 5.4-19.1 18.7-19.1 45.7s19.6 52.9 22.3 56.5c2.7 3.5 38.5 58.8 93.2 82.6 54.7 23.9 54.7 15.9 64.6 14.9 9.9-.9 32-12.8 36.5-25.1 4.6-12.3 4.6-22.8 3.2-25.1-1.3-2.4-4.9-3.8-10.3-6.4z"/>
+  </svg>
+
+  <a href="https://wa.me/+923439399590" class="hover:text-yellow-400 transition">
+    WhatsApp
+  </a>
+</p>
+
+  <!-- Email -->
+  <p class="flex items-center gap-3 mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12l-4 4-4-4m8 0V6a2 2 0 00-2-2H6a2 2 0 00-2 2v6" />
+    </svg>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Khalilkhan7120@gmail.com" target="_blank" class="hover:text-yellow-400 transition">Khalilkhan7120@gmail.com</a>
+  </p>
+
+  <!-- Facebook -->
+  <p class="flex items-center gap-3 mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M22 12.073c0-5.514-4.486-10-10-10s-10 4.486-10 10c0 5 3.657 9.128 8.438 9.878v-6.988h-2.54v-2.89h2.54v-2.21c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562v1.883h2.773l-.443 2.89h-2.33v6.988c4.781-.75 8.438-4.878 8.438-9.878z"/>
+    </svg>
+    <a href="https://www.facebook.com/profile.php?id=61588603534922" class="hover:text-yellow-400 transition">Facebook</a>
+  </p>
+
+  <!-- Instagram -->
+  <p class="flex items-center gap-3 mb-3">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M7.75 2h8.5C19.3 2 22 4.7 22 7.75v8.5C22 19.3 19.3 22 16.25 22h-8.5C4.7 22 2 19.3 2 16.25v-8.5C2 4.7 4.7 2 7.75 2zm0 2C5.679 4 4 5.679 4 7.75v8.5C4 18.321 5.679 20 7.75 20h8.5C18.321 20 20 18.321 20 16.25v-8.5C20 5.679 18.321 4 16.25 4h-8.5zm8.5 1.5a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/>
+    </svg>
+    <a href="#" class="hover:text-yellow-400 transition">Instagram</a>
+  </p>
+
+
+
+    </div>
+
+  </div>
+
+  <!-- BOTTOM COPYRIGHT -->
+  <div class="border-t border-gray-800 mt-12">
+    <div class="max-w-7xl mx-auto px-6 text-center py-6 text-gray-500 text-sm lg:flex lg:justify-between lg:items-center">
+      <span>© 2026 Al Abbas Online Islamic Academy | All Rights Reserved</span>
+      <span class="mt-2 lg:mt-0">Designed by <strong>Al Abbas Academy</strong></span>
+    </div>
+  </div>
+
+</footer>
+
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/+923439399590" class="whatsapp-float"> WhatsApp </a>
+    <script>
+      function toggleMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+    </script>
+  </body>
+</html>
